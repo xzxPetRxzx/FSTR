@@ -70,7 +70,7 @@ class PerevalAddedSerializer(serializers.Serializer):
         level_obj.spring = level.get("spring", level_obj.spring)
         level_obj.save()
         for image in images:
-            if images_obj != []:
+            if images_obj:
                 image_obj = images_obj.pop(0)
                 image_obj.title = image.get("title", image_obj.title)
                 image_obj.data = image.get("data", image_obj.data)
